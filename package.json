@@ -35,6 +35,7 @@
     "@naverpay/editorconfig": "^1.0.0",
     "@naverpay/eslint-config": "^2.3.1",
     "@naverpay/markdown-lint": "^1.0.0",
-    "@naverpay/prettier-config": "^1.0.1"
+    "@naverpay/prettier-config": "^1.0.1",
+    "lefthook": "^1.13.4"
   }
 }

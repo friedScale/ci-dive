@@ -1,0 +1,13 @@
+# lefthook.yml
+pre-commit:
+  parallel: true
+  commands:
+    lint:
+      glob: '**/*.{js,ts,tsx} '
+      run: pnpm exec eslint {staged_files}
+    prettier:
+      glob: '**/*.{js,ts,tsx,json,yml,yaml}'
+      run: pnpm exec prettier --check {staged_files}
+    markdownlint:
+      glob: '**/*.md'
+      run: pnpm exec markdownlint {staged_files}
