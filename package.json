@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@mcp-gadget/wiki-link-helper",
+  "version": "0.1.0",
+  "description": "a simple searching helper for wiki links",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint '**/*.{js,ts,tsx}' --fix",
+    "prettier": "prettier --check **/*.{js,ts,tsx,json,yaml}",
+    "prettier:fix": "prettier --write **/*.{js,ts,tsx,json,yaml}",
+    "md": "markdownlint '**/*.md'",
+    "md:fix": "markdownlint '**/*.md' --fix"
+  },
+  "keywords": [
+    "wiki",
+    "link",
+    "mcp"
+  ],
+  "author": "beak",
+  "bugs": "https://github.com/friedScale/wiki-link-helper/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/friedScale/wiki-link-helper.git"
+  },
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "beak",
+      "email": "cowooco@gmail.com"
+    }
+  ],
+  "packageManager": "pnpm@10.17.1",
+  "devDependencies": {
+    "@naverpay/editorconfig": "^1.0.0",
+    "@naverpay/eslint-config": "^2.3.1",
+    "@naverpay/markdown-lint": "^1.0.0",
+    "@naverpay/prettier-config": "^1.0.1"
+  }
+}
