@@ -4,6 +4,52 @@
   "version": "0.1.0",
   "description": "a simple searching helper for wiki links",
   "main": "index.js",
+  "module": "dist/esm/index.mjs",
+  "types": "dist/cjs/index.d.ts",
+  "files": ["dist"],
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.mts",
+        "default": "./dist/esm/index.mjs"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    },
+    "./react": {
+      "import": {
+        "types": "./dist/esm/react.d.mts",
+        "default": "./dist/esm/react.mjs"
+
+      },
+      "require": {
+        "types": "./dist/cjs/react.d.ts",
+        "default": "./dist/cjs/react.js"
+      }
+    },
+    "./next": {
+      "import": {
+        "types": "./dist/esm/next.d.mts",
+        "default": "./dist/esm/next.mjs"
+      },
+      "require": {
+        "types": "./dist/cjs/next.d.ts",
+        "default": "./dist/cjs/next.js"
+      }
+    },
+    "./utils": {
+      "import": {
+        "types": "./dist/esm/utils.d.mts",
+        "default": "./dist/esm/utils.mjs"
+      },
+      "require": {
+        "types": "./dist/cjs/utils.d.ts",
+        "default": "./dist/cjs/utils.js"
+      }
+    }
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint '**/*.{js,ts,tsx}' --fix",
