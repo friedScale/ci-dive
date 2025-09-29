@@ -5,6 +5,8 @@ import {babel} from "@rollup/plugin-babel"
 import browserlistToEsbuild from "browserslist-to-esbuild"
 import react from "@vitejs/plugin-react-swc"
 import preserveDirectives from "rollup-preserve-directives"
+import dts from "vite-plugin-dts"
+
 import tsconfigPaths from "vite-tsconfig-paths";
 import pkg from "./package.json"
 
@@ -67,6 +69,11 @@ export default defineConfig({
             ],
             extensions: ['.js', '.ts', '.tsx'],
             exclude: 'node_modules/**',
+        }),
+        dts({
+            tsconfigPath: './tsconfig.json',
+            outDir: 'dist/types',
+            rollupTypes: false,
         })
     ]
 });
