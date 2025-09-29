@@ -60,7 +60,9 @@
     "md:fix": "markdownlint '**/*.md' --fix",
     "build": "pnpm run clean && vite build --config vite.config.mts && pnpm run build:dts",
     "build:dts": "tsup --config tsup.config.mts",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "release": "changeset publish",
+    "changeset-version": "changeset version && pnpm run md:fix"
   },
   "keywords": [
     "ci",
@@ -82,6 +84,7 @@
   "packageManager": "pnpm@10.17.1",
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.28.3",
+    "@changesets/cli": "^2.29.7",
     "@naverpay/editorconfig": "^1.0.0",
     "@naverpay/eslint-config": "^2.3.1",
     "@naverpay/markdown-lint": "^1.0.0",
