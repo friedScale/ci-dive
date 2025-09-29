@@ -16,9 +16,8 @@
     "clean": "rm -rf dist"
   },
   "keywords": [
-    "wiki",
-    "link",
-    "mcp"
+    "ci",
+    "devops"
   ],
   "author": "beak",
   "bugs": "https://github.com/friedScale/wiki-link-helper/issues",
